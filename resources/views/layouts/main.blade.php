@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>@yield('title') - Sistem Perpustakaan</title>
+</head>
+
+<body>
+    <header>
+        <h1>Sistem Perpustakaan</h1>
+        <nav>
+            <a href="/">Home</a> |
+            <a href="/dashboard">Dashboard</a> |
+            <a href="/buku">Buku</a> |
+            <a href="/about">About</a>
+        </nav>
+        <hr>
+    </header>
+    <div class="content">
+        @yield('content')
+    </div>
+    <footer>
+        <hr>
+        <p>&copy; 2025 Sistem Perpustakaan</p>
+    </footer>
+</body>
+
+</html>
