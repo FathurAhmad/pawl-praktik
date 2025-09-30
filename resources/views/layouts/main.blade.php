@@ -12,7 +12,8 @@
             <a href="/">Home</a> |
             <a href="/dashboard">Dashboard</a> |
             <a href="/buku">Buku</a> |
-            <a href="/about">About</a>
+            <a href="/about">About</a> |
+            <a href="{{ route('mahasiswa.index') }}">Mahasiswa</a>
         </nav>
         <hr>
     </header>
