@@ -33,7 +33,7 @@ class MahasiswaController extends Controller
     {
         $request->validate([
             'nama' => 'required',
-            'nim' => 'required|unique:mahasiswa,nim',
+            'nim' => 'required|unique:mahasiswas,nim',
             'prodi' => 'required',
             'angkatan' => 'required|numeric|digits:4',
         ]);
@@ -41,7 +41,7 @@ class MahasiswaController extends Controller
     Mahasiswa::create($request->all());
 
         return redirect()->route('mahasiswa.index')
-            ->with('success', 'Mahasiswa berhasil ditambahkan');
+            ->with('success.create');
     }
 
     /**
@@ -70,7 +70,7 @@ class MahasiswaController extends Controller
         $mhs = Mahasiswa::findOrFail($id);
         $mhs->update($request->all());
         return redirect()->route('mahasiswa.index')
-            ->with('success', 'Data berhasil diperbarui');
+            ->with('success');
     }
 
     /**
@@ -81,6 +81,6 @@ class MahasiswaController extends Controller
         $mhs = Mahasiswa::findOrFail($id);
         $mhs->delete();
         return redirect()->route('mahasiswa.index')
-            ->with('success', 'Data berhasil dihapus');
+            ->with('success');
     }
 }
