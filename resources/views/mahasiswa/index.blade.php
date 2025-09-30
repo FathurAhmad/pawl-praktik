@@ -21,10 +21,12 @@
                     <td>{{ $item->angkatan }}</td>
 
                     <td>
-                        <form action="{{ route('mahasiswa.destroy', $item->id) }}" method="POST" style="display:inline;">
+                        <a href="{{ route('mahasiswa.show', $item->id) }}" class="btn btn-info btn-sm">Detail</a>
+                        <a href="{{ route('mahasiswa.edit', $item->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                        <form action="{{ route('mahasiswa.destroy', $item->id) }}" method="POST" style="display:inline">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" onclick=" return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</button>
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Yakin mau hapus?')">Hapus</button>
                         </form>
                     </td>
                 </tr>

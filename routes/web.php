@@ -24,3 +24,5 @@ Route::get('/buku', function () {
 });
 
 Route::resource('mahasiswa', MahasiswaController::class);
+
+Route::resource('buku', App\Http\Controllers\BukuController::class);

@@ -49,7 +49,8 @@ class MahasiswaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $mahasiswa = Mahasiswa::findOrFail($id);
+        return view('mahasiswa.show', compact('mahasiswa'));
     }
 
     /**
@@ -57,9 +58,9 @@ class MahasiswaController extends Controller
      */
     public function edit($id)
     {
-        $mhs = Mahasiswa::findOrFail($id);
+        $mahasiswa = Mahasiswa::findOrFail($id);
 
-        return view('mahasiswa.edit', compact('mhs'));
+        return view('mahasiswa.edit', compact('mahasiswa'));
     }
 
     /**

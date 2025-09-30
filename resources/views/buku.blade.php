@@ -26,6 +26,11 @@
                 <td>Dewa</td>
                 <td>2024</td>
             </tr>
+            <tr>
+                <td>Buku 4</td>
+                <td>Ayudya</td>
+                <td>2025</td>
+            </tr>
         </tbody>
     </table>
 @endsection
